@@ -1,0 +1,88 @@
+@import '~material-colors/dist/colors.sass'
+@import '../assets/rwd.sass'
+
+.container
+  flex: 1
+  display: flex
+  flex-direction: column
+  max-width: 100%
+
+.header-container
+  z-index: 1
+  display: flex
+  flex-direction: column
+  background-color: white
+  position: fixed
+  overflow-x: hidden
+  width: calc(100% - 280px)
+  @include max-xs
+    width: 100%
+
+.title-container
+  display: flex
+  flex-direction: row
+  align-items: flex-start
+  margin: 10px
+  margin-bottom: 0px
+  max-width: 100%
+  .menu
+    display: none
+    margin: 10px
+    cursor: pointer
+    & i
+      font-size: 24px
+    @include max-xs
+      display: inline-block
+  .title
+    flex: 1
+    max-width: 100%
+    margin: 10px
+    overflow: hidden
+    h2
+      margin: 0
+      padding: 0
+      font-weight: normal
+      text-overflow: ellipsis
+      white-space: nowrap
+      overflow: hidden
+  .info
+    .btn-info
+      margin: 8px
+      padding: 8px
+
+.status-container
+  overflow-x: scroll
+  overflow-y: hidden
+  display: inline-block
+  margin: 0 18px
+  padding: 5px 0
+  span
+    text-align: right
+    white-space: nowrap
+    font-size: 13px
+    color: $md-grey-400
+
+.search-bar-container
+  margin: 5px 15px
+
+.list-container
+  flex: 1
+  display: flex
+  flex-direction: column
+  padding-top: 136px
+
+.list-info-detail
+  padding-left: 25px
+  margin: 5px 0
+  li
+    font-size: 13px
+    padding-bottom: 5px
+    line-height: 1.45
+    code
+      padding: 2px
+      padding-top: 0.2em
+      padding-bottom: 0.2em
+      margin: 0 2px
+      font-size: 85%
+      background-color: rgba(27,31,35,0.05)
+      border-radius: 3px

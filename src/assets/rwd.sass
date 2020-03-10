@@ -1,0 +1,120 @@
+@charset "UTF-8"
+$min-bg: 1680px
+$max-lg: 1679px
+$min-lg: 1200px
+$max-md: 1199px
+$min-md: 992px
+$max-sm: 991px
+$min-sm: 768px
+$max-xs: 767px
+$min-xs: 480px
+$max-mini: 479px
+$min-mini: 320px
+
+//------mini 區間------
+// mini
+@mixin mini
+  @media (min-width: $min-mini) and (max-width: $max-mini)
+    @content
+
+// max-mini
+@mixin max-mini
+  @media screen and (max-width: $max-mini)
+    @content
+
+//------xs 區間------
+// min-xs
+@mixin min-xs
+  @media screen and (min-width: $min-xs)
+    @content
+
+// xs
+@mixin xs
+  @media (min-width: $min-xs) and (max-width: $max-xs)
+    @content
+
+// max-xs
+@mixin max-xs
+  @media screen and (max-width: $max-xs)
+    @content
+
+//------sm 區間------
+// min-sm
+@mixin min-sm
+  @media screen and (min-width: $min-sm)
+    @content
+// sm
+@mixin sm
+  @media (min-width: $min-sm) and (max-width: $max-sm)
+    @content
+
+// max-sm
+@mixin max-sm
+  @media screen and (max-width: $max-sm)
+    @content
+
+//------md 區間------
+// min-md
+@mixin min-md
+  @media screen and (min-width: $min-md)
+    @content
+
+// md
+@mixin md
+  @media (min-width: $min-md) and (max-width: $max-md)
+    @content
+
+// max-md
+@mixin max-md
+  @media screen and (max-width: $max-md)
+    @content
+
+//------lg 區間------
+// min-lg
+@mixin min-lg
+  @media screen and (min-width: $min-lg)
+    @content
+
+
+// lg
+@mixin lg
+  @media (min-width: $min-lg) and (max-width: $max-lg)
+    @content
+
+// max-lg
+@mixin max-lg
+  @media screen and (max-width: $max-lg)
+    @content
+
+//------bg 區間------
+// bg
+@mixin bg
+  @media screen and (min-width: $min-bg)
+    @content
+
+
+//               Autor Elroy Tsai
+//      ----------------------------------
+//     |        less     more    between  |
+//     | 320                              |
+//     |                           mini   |
+//     | 479  max-mini                    |
+//     |----------------------------------|
+//     | 480            min-xs            |
+//     |                            xs    |
+//     | 767   max-xs                     |
+//     |----------------------------------|
+//     | 768            min-sm            |
+//     |                            sm    |
+//     | 991   max-sm                     |
+//     |----------------------------------|
+//     | 992            min-md            |
+//     |                            md    |
+//     | 1199  max-md                     |
+//     |----------------------------------|
+//     | 1200           min-lg            |
+//     |                            lg    |
+//     | 1407  max-lg                     |
+//     |----------------------------------|
+//     | 1408             bg              |
+//      ----------------------------------

@@ -1,0 +1,88 @@
+@import '~material-colors/dist/colors.sass'
+@import '../assets/rwd.sass'
+
+.container
+  padding: 12px
+  margin: 0 20px
+  border-style: solid
+  border-color: $md-grey-300
+  border-width: 1px 0 1px 0
+  position: relative
+  &+&
+    border-width: 0 0 1px 0
+  @include max-xs
+    padding: 6px
+    margin: 0 14px
+  &.selected
+    border-width: 1px
+    border-color: $md-teal-300
+    &+&
+      border-width: 0px 1px 1px 1px
+    & .badge
+      position: absolute
+      right: 0
+      top: 0
+      color: white
+      background-color: $md-teal-300
+      border-radius: 0 0 0 5px
+      padding: 3px 5px
+  &.hover
+    background-color: $md-blue-grey-50
+    cursor: pointer
+.title-container
+  display: flex
+  flex-direction: row
+  padding: 6px
+  h3
+    padding: 6px
+    font-size: 18px
+    line-height: 28px
+    font-weight: normal
+    margin: 0
+    user-select: none
+    word-break: break-all
+.detail-container
+  display: flex
+  flex-direction: row
+  align-items: flex-end
+  padding: 10px
+.info-container
+  flex: 1
+.state-container
+  line-height: 24px
+  @include max-xs
+    padding-bottom: 10px
+  i
+    padding-right: 15px
+    user-select: none
+    font-size: 20px
+    font-weight: bold
+    &.hot
+      color: $md-red-500
+    &.credit-card
+      color: $md-blue-500
+    &.special
+      color: $md-green-500
+    &.dot
+      width: 24px
+      font-size: 12px
+      font-weight: normal
+      color: $md-grey-500
+.price-container
+  user-select: none
+  float: right
+  @include max-xs
+    float: left
+  .source
+    font-size: 15px
+    color: $md-grey-500
+    text-decoration: line-through
+    padding-right: 10px
+  .price
+    display: inline-flex
+    font-size: 22px
+    color: $md-red-400
+    &::before
+      content: "$ "
+.action-btn-container
+  padding-left: 10px

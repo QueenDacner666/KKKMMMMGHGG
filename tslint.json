@@ -1,0 +1,11 @@
+{
+  "extends": "tslint-config-standard",
+  "globals": {
+    "require": true
+  },
+  "rules": {
+    "trailing-comma": false,
+    "no-consecutive-blank-lines": false,
+    "await-promise": true
+  }
+}

@@ -1,0 +1,15 @@
+image: node
+before_script:
+  - yarn install --production=false
+
+pages:
+  stage: deploy
+  script:
+    - yarn run build
+    - mv dist public
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
+  when: manual
