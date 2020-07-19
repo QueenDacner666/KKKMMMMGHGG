@@ -19,7 +19,7 @@
     "hashids": "^1.1.4",
     "is-mobile": "^0.3.0",
     "json2csv": "^3.11.5",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.19",
     "material-colors": "^1.2.5",
     "moment": "^2.19.3",
     "normalize.css": "^7.0.0",
